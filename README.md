@@ -1,2 +1,2 @@
-# RNA-seq-Pipeline
+# RNA-Seq-Pipeline
 Relevant RNA-Seq scripts 
