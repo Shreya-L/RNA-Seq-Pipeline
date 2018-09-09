@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#SBATCH --mail-user=sxl1308@case.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=24:00:00
+#SBATCH --mem=38g
+#SBATCH --output=fastqs.out
+#SBATCH -p smp
+
+#Date: 3-9-17
+
+#module use /mnt/projects/oohpc/modules
+
+module load sratoolkit
+
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343474
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343475
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343476
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343479
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343480
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343482
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343483
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343484
+mkdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343488
+
+
+
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343474 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343474/SRR4343474.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343475 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343475/SRR4343475.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343476 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343476/SRR4343476.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343479 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343479/SRR4343479.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343480 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343480/SRR4343480.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343482 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343482/SRR4343482.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343483 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343483/SRR4343483.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343484 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343484/SRR4343484.sra
+fastq-dump --outdir /mnt/pan/courses/sybb412/sxl1308/readsRaw/SRR4343488 -I --split-files /mnt/pan/courses/sybb412/sxl1308/sra/SRR4343488/SRR4343488.sra
+
+
